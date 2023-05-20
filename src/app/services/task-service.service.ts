@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+//injectable are the decorator to implement services in angular
 @Injectable({
   providedIn: 'root',
 })
