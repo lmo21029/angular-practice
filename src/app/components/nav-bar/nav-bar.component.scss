@@ -1,0 +1,19 @@
+
+
+ .nav-bar_container {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   :hover {
+    cursor: pointer;
+     border: 1px solid gray;
+   }
+
+   .nav-bar_item {
+    background: ghostwhite;
+    display: flex;
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+   }
+ }
