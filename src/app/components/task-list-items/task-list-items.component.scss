@@ -1,0 +1,14 @@
+.list-item_container {
+  display: flex;
+  margin-bottom: 20px;
+
+  .list-item_remove-item {
+    color: red;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .list-item_item {
+
+  }
+}

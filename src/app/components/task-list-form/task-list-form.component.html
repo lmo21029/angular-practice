@@ -1,0 +1,16 @@
+<div class="task-list-form_container">
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div class="form-group">
+      <label for="taskName">Task name:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="taskName"
+        ngModel
+        name="taskName"
+      />
+    </div>
+
+    <button>Add task</button>
+  </form>
+</div>

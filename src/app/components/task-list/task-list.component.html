@@ -1,7 +1,9 @@
-<h4>List items:</h4>
-<div *ngFor="let item of listItems">
-  <ul>
-    <li>{{ item.id }}</li>
-    <li>{{ item.itemName }}</li>
-  </ul>
+<div class="task-list_container">
+  <h1>Task list:</h1>
+  <task-list-form (taskItem)="handleTaskItemValue($event)"></task-list-form>
+  <task-list-items
+    *ngFor="let item of listItems"
+    [item]="item"
+    (removeItemList)="handleRemoveListItem($event)"
+  ></task-list-items>
 </div>
