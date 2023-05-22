@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskServiceService } from 'src/app/services/task-service.service';
-import { NgForm } from '@angular/forms';
-
-interface item {
-  id: number;
-  itemName: string;
-}
+import { Item } from 'src/store/task.interface';
 
 @Component({
   selector: 'app-task-list',
@@ -22,11 +17,11 @@ export class TaskListComponent implements OnInit {
     this.listItems = this.listService.getListItems();
   }
 
-  handleTaskItemValue(item: item) {
+  handleTaskItemValue(item: Item) {
     this.listService.addItemList(item);
   }
 
-  handleRemoveListItem(item: item) {
+  handleRemoveListItem(item: Item) {
     this.listService.removeItem(item);
   }
 }

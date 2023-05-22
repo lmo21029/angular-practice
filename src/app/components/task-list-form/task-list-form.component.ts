@@ -1,10 +1,6 @@
 import { Component, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Item } from 'src/store/task.interface';
 import { NgForm } from '@angular/forms';
-
-interface item {
-  id: number;
-  itemName: string;
-}
 
 @Component({
   selector: 'task-list-form',
@@ -13,7 +9,7 @@ interface item {
 })
 export class TaskListFormComponent {
   @ViewChild('form') taskForm!: NgForm;
-  @Output() taskItem = new EventEmitter<item>();
+  @Output() taskItem = new EventEmitter<Item>();
 
   onSubmit() {
     this.taskItem.emit(this.taskForm.value);

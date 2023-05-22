@@ -1,9 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
-interface item {
-  id: number;
-  itemName: string;
-}
+import { Item } from 'src/store/task.interface';
 
 @Component({
   selector: 'task-list-items',
@@ -11,10 +7,10 @@ interface item {
   styleUrls: ['./task-list-items.component.scss'],
 })
 export class TaskListItemsComponent {
-  @Input() item?: item;
-  @Output() removeItemList = new EventEmitter<item>();
+  @Input() item?: Item;
+  @Output() removeItemList = new EventEmitter<Item>();
 
-  removeItem(itemId: item | undefined) {
+  removeItem(itemId: Item | undefined) {
     this.removeItemList.emit(itemId);
   }
 }
